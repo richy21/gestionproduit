@@ -1,0 +1,37 @@
+RewriteEngine on
+
+RewriteRule ^accueil$ src/view/index.php
+
+
+RewriteRule ^newProduct$ src/view/produit/add.php
+RewriteRule ^listProducts$ src/view/produit/liste.php
+RewriteRule ^produitC$ src/controller/produitController.php
+RewriteRule ^newProductS$ src/view/produit/add.php?ok=1
+RewriteRule ^newProductE$ src/view/produit/add.php?ok=0
+
+
+RewriteRule ^preAccueil$ preAccueil.php
+RewriteRule ^errorConnexion$ index.php?connexion=0
+
+RewriteRule ^userC$ src/controller/userController.php
+RewriteRule ^adC$ src/controller/gestionproduitmvcController.php
+RewriteRule ^delete$ src/controller/gestionproduitmvcController.php?vider
+
+
+RewriteRule ^newAd$ src/view/gestionproduitmvc/add.php
+RewriteRule ^newAdS$ src/view/gestionproduitmvc/add.php?ok=1
+RewriteRule ^newAdE$ src/view/gestionproduitmvc/add.php?ok=0
+RewriteRule ^listAd$ src/view/gestionproduitmvc/liste.php
+RewriteRule ^retrait$ src/view/gestionproduitmvc/retrait.php
+RewriteRule ^retraitE$ src/view/gestionproduitmvc/retrait.php?ok=0
+
+RewriteRule ^deconnexion$ src/controller/userController.php?deconnexion=1
+RewriteRule ^compteC$ src/controller/compteController.php
+RewriteRule ^clientC$ src/controller/clientController.php
+
+
+RewriteRule ^newUser$ src/view/user/add.php
+RewriteRule ^newUserS$ src/view/user/add.php?ok=1
+RewriteRule ^newUserE$ src/view/user/add.php?ok=0
+RewriteRule ^newUserC$ src/view/user/add.php?court=1
+RewriteRule ^listeUser$ src/view/user/liste.php
